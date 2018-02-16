@@ -47,11 +47,11 @@ public class AppTest
 
     public void testEmptyArray() {
       ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1, array.size(), null));
+      assertFalse(new App().search(array, 1, array.size(), 0));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1, array.size(), null));
+      assertFalse(new App().search(null, 1, array.size(), 0));
     }
     public void testMax() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));

@@ -20,7 +20,7 @@ public class App
       if (array == null) return false;
       if (size > 100) {return false; System.out.println("Max limit is reached. Max limit is 100.");}
       for (int elt : array) {
-	if (elt == ob && ob != null)
+	if (elt == ob && ob != 0)
 		check = check+1; 
 		if(check == size){
 			return false;
@@ -56,8 +56,9 @@ public class App
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-
-          boolean result = App.search(inputList, input2AsInt);
+	  int input3=inputList.size();
+	  int input4=value;
+          boolean result = App.search(inputList, input2AsInt, input3 ,input4 );
 
          Map map = new HashMap();
           map.put("result", result);
