@@ -18,13 +18,14 @@ public class App
       int check=0;
       System.out.println("inside search");
       if (array == null) return false;
-      if (size > 100) {return false; System.out.println("Max limit is reached. Max limit is 100.");}
+      if (size > 100) {System.out.println("Max limit is reached. Max limit is 100.");return false; }
       for (int elt : array) {
 	if (elt == ob && ob != 0)
 		check = check+1; 
 		if(check == size){
-			return false;
+			
 			System.out.println("All numbers are the same. The answer is obvious.");
+			return false;
 		}	
       }
       for (int elt : array) {
