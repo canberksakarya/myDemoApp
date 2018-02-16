@@ -14,12 +14,21 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
+    public static boolean search(ArrayList<Integer> array, int e,int size,int ob) {
+      int check=0;
       System.out.println("inside search");
       if (array == null) return false;
-
+      if (size > 100) {return false; System.out.println("Max limit is reached. Max limit is 100.");}
       for (int elt : array) {
-        if (elt == e) return true;
+	if (elt == ob && ob != null)
+		check = check+1; 
+		if(check == size){
+			return false;
+			System.out.println("All numbers are the same. The answer is obvious.");
+		}	
+      }
+      for (int elt : array) {
+	if (elt == e) return true;
       }
       return false;
     }
