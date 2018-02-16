@@ -46,9 +46,10 @@ public class App
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+	  int value=0;
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList.add(value);
           }
           System.out.println(inputList);
@@ -56,8 +57,8 @@ public class App
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-	  int input3=inputList.size();
-	  int input4=value;
+	  int input3 = inputList.size();
+	  int input4 = value;
           boolean result = App.search(inputList, input2AsInt, input3 ,input4 );
 
          Map map = new HashMap();
