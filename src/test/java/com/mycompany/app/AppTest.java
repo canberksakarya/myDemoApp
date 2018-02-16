@@ -51,7 +51,7 @@ public class AppTest
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1, array.size(), 0));
+      assertFalse(new App().search(null, 1, 0, 0));
     }
     public void testMax() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
