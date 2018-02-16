@@ -1,6 +1,8 @@
 package com.mycompany.app;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
+import static spark.Spark.port;
+import static spark.Spark.post;
 
 import java.util.HashMap;
 import java.util.ArrayList;
